@@ -24,7 +24,9 @@ export async function POST(request: NextRequest) {
 
         if (!validPassword) {
             return NextResponse.json({
-                error: "Wrong email or password mismatch."
+                error: "Wrong email or password."
+            }, {
+                status: 400
             })
         }
 
