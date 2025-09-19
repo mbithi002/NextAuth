@@ -15,6 +15,7 @@ export default function VerfiyEmailPage() {
         token,
       });
       setVerified(true);
+      return response;
     } catch (error: any) {
       setError(true);
       console.log(error.message);
